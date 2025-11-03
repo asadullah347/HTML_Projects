@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>Light-theme
+<body class = "light-theme">
+   <h1>Task List</h1>
+    <p id = "msh"> Current task:</p>
+    <ul>
+        <li class= "List"> Add visual style</li>
+        <li class = "List"> Add Light and dark themes</li>
+        <li> Enable switching the theme</li>
+    </ul>
+    <div>
+        <button class="btn">Dark</button>
+    </div>
+    <script src="apps.js"></script>
+</body>
+</html>
