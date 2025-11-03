@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>젤다의 전설: 브레스 오브 더 와일드</title>
+  <style>
+    /* 전체 레이아웃 */
+    :root{font-family: Apple SD Gothic Neo,\"Malgun Gothic\",\"Noto Sans KR\", Arial, sans-serif}
+    body{margin:30px; color:#222; line-height:1.6}
+    .container{max-width:980px}
+
+    /* 헤더 */
+    h1{font-size:34px; margin-bottom:10px}
+
+    /* 목차(네비게이션) */
+    nav ul{margin-left:18px}
+    nav a{color:#1a0dab; text-decoration:underline}
+
+    /* 섹션 제목 */
+    h2{font-size:20px; margin-top:36px}
+
+    /* 표 스타일 */
+    table.spec{border-collapse:collapse; margin-top:12px}
+    table.spec th, table.spec td{border:1px solid #666; padding:8px 12px; text-align:left}
+    table.spec th{background:#f4f4f4; width:150px}
+
+    /* 이미지 */
+    .media img{max-width:220px; display:block}
+
+    /* 폼 스타일 */
+    form .form-row{margin:10px 0}
+    label{display:block; margin-bottom:6px}
+    input[type=text], input[type=email], select, textarea{width:60%; padding:6px; border:1px solid #aaa; border-radius:3px}
+    textarea{height:100px; width:70%}
+    input[type=submit]{padding:8px 14px; border:1px solid #888; background:#eee; cursor:pointer}
+
+    footer{margin-top:40px; color:#555}
+
+    /* 반응형 소소한 조정 */
+    @media (max-width:600px){
+      input[type=text], input[type=email], select, textarea{width:100%}
+      textarea{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>젤다의 전설: 브레스 오브 더 와일드</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#intro">게임 소개</a></li>
+        <li><a href="#features">게임 특징</a></li>
+        <li><a href="#specs">게임 스펙</a></li>
+        <li><a href="#media">미디어</a></li>
+        <li><a href="#feedback">의견 남기기</a></li>
+      </ul>
+    </nav>
+
+    <section id="intro">
+      <h2>게임 소개</h2>
+      <p>젤다의 전설: 브레스 오브 더 와일드는 닌텐도의 액션 어드벤처 게임으로, 플레이어는 링크가 되어 광활한 하이랄 대지를 탐험하게 됩니다. 오픈월드를 자유롭게 돌아다니며 퍼즐을 풀고, 장비를 수집하며, 다양한 적과 마주합니다.</p>
+    </section>
+
+    <section id="features">
+      <h2>게임 특징</h2>
+      <ul>
+        <li>자유로운 오픈월드 탐험</li>
+        <li>다양한 무기와 아이템 수집</li>
+        <li>실시간 날씨와 생태계</li>
+        <li>퍼즐과 전투의 조화</li>
+      </ul>
+    </section>
+
+    <section id="specs">
+      <h2>게임 스펙</h2>
+      <table class="spec" role="table">
+        <tr>
+          <th>구분</th>
+          <th>내용</th>
+        </tr>
+        <tr>
+          <td>플랫폼</td>
+          <td>Nintendo Switch</td>
+        </tr>
+        <tr>
+          <td>장르</td>
+          <td>액션 어드벤처</td>
+        </tr>
+        <tr>
+          <td>발매일</td>
+          <td>2017년 3월</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="media" class="media">
+      <h2>게임 미디어</h2>
+      <!-- 실제 파일은 프로젝트 폴더의 images 폴더에 넣어주세요 -->
+      <img src="images/zelda_cover.jpg" alt="젤다의 전설 표지">
+      <p>게임 플레이 영상 보기: <a href="https://www.youtube.com/" target="_blank" rel="noopener">유튜브 링크</a></p>
+    </section>
+
+    <section id="feedback">
+      <h2>의견 남기기</h2>
+      <form action="#" method="post">
+        <div class="form-row">
+          <label for="name">이름:</label>
+          <input id="name" name="name" type="text" placeholder="이름을 입력하세요">
+        </div>
+
+        <div class="form-row">
+          <label for="email">이메일:</label>
+          <input id="email" name="email" type="email" placeholder="example@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="rating">게임 평점:</label>
+          <select id="rating" name="rating">
+            <option value="5">★★★★★ (5점)</option>
+            <option value="4">★★★★ (4점)</option>
+            <option value="3">★★★ (3점)</option>
+            <option value="2">★★ (2점)</option>
+            <option value="1">★ (1점)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="comment">의견:</label>
+          <textarea id="comment" name="comment" placeholder="의견을 입력하세요"></textarea>
+        </div>
+
+        <div class="form-row">
+          <input type="submit" value="제출하기">
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Game Programming Class</p>
+    </footer>
+  </div>
+</body>
+</html>

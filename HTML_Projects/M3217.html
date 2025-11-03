@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>우리 학교 Game Studio</h1>
+        <nav>
+            <ul>
+                <li><a herf="#intro">스튜디오 소개</a></li>
+                <li><a herf="#works">작품 전시</a></li>
+                <li><a herf="#content">문의하기</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="main">
+        <section id="intro">
+            <h2>스튜디오 소개</h2>
+            <p>
+                <b>우리 스튜디오</b>는 다양한 게임을 기획하고 개발하는 동아리입니다디.
+                <br>
+                모든 구성원이 열정적으로 참여하며 <i>창의적인 아이디어</i>를 실현합니다.
+            </p>
+
+            <h3>스튜디오 특징</h3>
+            <ul style="list-style-type: square;">
+                <li>학생 중심의 자율적인 개발</li>
+                <li>다양한 장르의 자율적인 개발</li>
+                <li>축제 전시 및 대회 참가</li>
+            </ul>
+        </section>
+
+        <section id="works">
+              <h2>작품 전시</h2>
+              <p>올해 전시되는 게임 목록입니다:</p>
+              <ol>
+                <li>슈팅 게임 - Galaxy Battle</li>
+                <li>퍼즐 게임 - Logic Maze</li>
+                <li>RPG 게임 - Adventure Quest, Magic Quest</li>
+              </ol>
+        <table border="1px">
+        <caption>전시 일정표</caption>
+        <tr style="background-color: skyblue;">
+          <th>시간</th>
+          <th>작폼</th>
+          <th>장소</th>
+        </tr>
+        <tr>
+          <td>10:00</td>
+          <td>Galaxy Battle</td>
+          <td>A부서</td>
+        </tr>
+        <tr>
+          <td>11:00</td>
+          <td>Logic Maze</td>
+          <td>B부서
+
+          </td>
+        </tr>
+        <tr>
+          <td>13:00</td>
+          <td>Adventure Quest</td>
+          <td rowspan="2">C부서</td>
+        </tr>
+        <tr>
+          <td>15:00</td>
+          <td>Magic Quest</td>
+        </tr>
+        </table>
+        <p>
+            <img scr="zelda.png" alt="게임 스크린샷 예시">
+            <figcaption>우리 스튜디오 게임 스크린샷</figcaption>
+        </p>
+        
+        <p>
+            <a href="https://www.naver.com/">네이버 바로가기</a>
+        </p>
+
+        <video src="sample.mp4" controls ></video>
+        </section>
+
+        <aside>
+            <h2>공지사항</h2>
+            <p>게임 시연은 점심시간 이후에도 자유롭게 체험 가능합니다.</p>
+        </aside>
+        <section id="content">
+            <h2>문의하기</h2>
+        <form>
+
+        </form>
+        </section>
+
+
+
+
+<fieldset>
+    <legend> 문의하기</legend>
+  <form action="#" method="post">
+    <section>
+    <div class="form-row">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+    </div>
+
+    <div class="form-row">
+      <label for="email">이메일</label>
+      <input type="email" id="email" name="email" placeholder="example@example.com">
+    </div>
+
+    <div>
+      <label for="text">문의 유형</label>
+      <select id="type" name="type">
+      <option value="general">일반 문의</option>
+      <option value="game">게임 관련</option>
+      <option value="etc">기타</option>
+      </select>  <br><br>
+
+      <label for="message">문의 내용</label><br><br>
+      <textarea if="message" name="message" rows="4" cols="40" required></textarea><br> <br>
+
+      <input type="submit" value="보내기">
+    </div>
+    </fieldset>
+        </form>
+    </section>
+</main>
+    <footer>
+        <p>&copy: 2025 우리 학교 Game Studio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id = "myInput" placeholder="여기에 글씨가 들어갑니다.">
+
+    <button onclick="writrText()">글씨 넣기</button>
+
+    <input type="text" id = "autoInput">
+
+
+    <script>
+        function writrText()
+        {
+            document.getElementById("myInput").value = "자바스크립트로 입력됨!";
+
+        let text = document.getElementById("autoInput").value;
+        console.log(text);
+        }
+        
+        window.onload = function()
+        {
+            document.getElementById("autoInput").value = "자동으로 들어산 글씨";
+        }
+    </script>
+
+</body>
+</html>
