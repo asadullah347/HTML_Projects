@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>카드 짝맞추기 게임</title>
+<style>
+  /* 게임 보드 */
+  #game{
+    display:grid;
+    grid-template-columns: repeat(4, 60px); /* 4열 */
+    gap:10px;
+    margin:  20px;
+  }
+
+  /* 카드 스타일 */
+  .card{
+    width: 60px;
+    height: 60px;
+    background: #4caf50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  h1 { margin-left: 20px; }
+</style>
+</head>
+<body>
+  <h1>카드 짝맞추기 게임</h1>
+  <div id="game"></div>
+  <p id="result"></p>
+
+<script>
+  const game = document.getElementById('game');
+  const resultEl = document.getElementById('result');
+
+  let first = null, second = null;
+  let matched = 0;
+  let lockBoard = false;
+
+  // 카드 숫자들 (짝 4쌍 = 8장)
+  const numbers = [1,1,2,2,3,3,4,4];
+
+  // 섞기
+  const shuffled = numbers.sort(() => Math.random() - 0.5);
+
+  // 카드 생성
+  shuffled.forEach(num => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.textContent = '?'; // 처음에는 숨김
+    card.dataset.value = num; // 실제 숫자 저장
+    card.addEventListener('click', () => flip(card));
+    game.appendChild(card);
+  });
+
+  // 카드 클릭 시 동작
+  function flip(card) {
+    if (lockBoard) return; // 비교 중일 때 클릭 방지
+    if (card === first) return; // 같은 카드 클릭 방지
+    if (card.textContent !== '?') return; // 이미 열린 카드 무시
+
+    // 카드 열기
+    card.textContent = card.dataset.value;
+
+    if (!first) {
+      // 첫 번째 카드 저장
+      first = card;
+      return;
+    }
+
+    // 두 번째 카드 저장
+    second = card;
+    lockBoard = true;
+
+    // 비교
+    if (first.dataset.value === second.dataset.value) {
+      // 일치 시 유지
+      matched += 2;
+      first = second = null;
+      lockBoard = false;
+
+      if (matched === shuffled.length) {
+        resultEl.textContent = '🎉 모두 맞췄어요!';
+      }
+    } else {
+      // 불일치 시 잠시 후 뒤집기
+      setTimeout(() => {
+        first.textContent = '?';
+        second.textContent = '?';
+        first = second = null;
+        lockBoard = false;
+      }, 700);
+    }
+  }
+</script>
+</body>
+</html>
